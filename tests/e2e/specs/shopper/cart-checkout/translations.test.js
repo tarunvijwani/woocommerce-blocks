@@ -94,7 +94,7 @@ describe( 'Shopper → Cart & Checkout → Translations', () => {
 		);
 		await expect( submitButton ).toMatch( 'Plaats bestelling' );
 
-		page.waitForSelector(
+		await page.waitForSelector(
 			'.wp-block-woocommerce-checkout-order-summary-block'
 		);
 
