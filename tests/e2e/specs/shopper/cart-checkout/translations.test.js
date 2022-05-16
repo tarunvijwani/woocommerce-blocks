@@ -54,6 +54,13 @@ describe( 'Shopper → Cart & Checkout → Translations', () => {
 		await shopper.block.goToCheckout();
 
 		await page.waitForSelector(
+			'.wp-block-woocommerce-checkout.wc-block-checkout.is-loading',
+			{
+				hidden: true,
+			}
+		);
+
+		await page.waitForSelector(
 			'#contact-fields .wc-block-components-checkout-step__title'
 		);
 
@@ -86,6 +93,10 @@ describe( 'Shopper → Cart & Checkout → Translations', () => {
 			'.wc-block-components-checkout-place-order-button'
 		);
 		await expect( submitButton ).toMatch( 'Plaats bestelling' );
+
+		page.waitForSelector(
+			'.wp-block-woocommerce-checkout-order-summary-block'
+		);
 
 		const orderSummary = await page.$(
 			'.wp-block-woocommerce-checkout-order-summary-block'
