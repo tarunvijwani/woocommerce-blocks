@@ -53,8 +53,6 @@ describe( 'Shopper → Cart & Checkout → Translations', () => {
 	it( 'USer can view translated Checkout block', async () => {
 		await shopper.block.goToCheckout();
 
-		await page.waitForNetworkIdle();
-
 		await page.waitForSelector(
 			'#contact-fields .wc-block-components-checkout-step__title'
 		);

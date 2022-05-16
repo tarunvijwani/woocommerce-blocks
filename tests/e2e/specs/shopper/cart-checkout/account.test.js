@@ -66,7 +66,7 @@ describe( 'Shopper → Checkout → Account', () => {
 		await shopper.block.goToCheckout();
 	} );
 
-	it.only( 'user can login to existing account', async () => {
+	it( 'user can login to existing account', async () => {
 		//Get the login link from checkout page.
 		const loginLink = await page.$eval(
 			'span.wc-block-components-checkout-step__heading-content a',

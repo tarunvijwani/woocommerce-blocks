@@ -7,7 +7,6 @@ module.exports = {
 	moduleNameMapper: {
 		'@woocommerce/blocks-test-utils': '<rootDir>/tests/utils',
 	},
-	maxWorkers: 2,
 	verbose: true,
 
 	reporters: [

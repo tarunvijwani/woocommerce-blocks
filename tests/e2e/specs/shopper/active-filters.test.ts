@@ -145,7 +145,7 @@ describe( 'Shopper → Active Filters Block', () => {
 			await expect( page ).toMatch( block.foundProduct );
 		} );
 
-		fit( 'When clicking the X on a filter it removes a filter', async () => {
+		it( 'When clicking the X on a filter it removes a filter', async () => {
 			const isRefreshed = jest.fn( () => void 0 );
 			await page.waitForSelector( block.class );
 			await page.waitForSelector(
