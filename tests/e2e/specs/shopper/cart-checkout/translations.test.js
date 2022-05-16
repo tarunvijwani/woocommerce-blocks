@@ -94,10 +94,10 @@ fdescribe( 'Shopper → Cart & Checkout → Translations', () => {
 		const orderSummary = await page.$(
 			'.wp-block-woocommerce-checkout-order-summary-block'
 		);
-		await expect( page ).toMatch( 'Besteloverzicht' );
-		await expect( page ).toMatch( 'Subtotaal' );
-		await expect( page ).toMatch( 'Waardebon code' );
-		await expect( page ).toMatch( 'Verzendmethoden' );
-		await expect( page ).toMatch( 'Totaal' );
+		await expect( orderSummary ).toMatch( 'Besteloverzicht' );
+		await expect( orderSummary ).toMatch( 'Subtotaal' );
+		await expect( orderSummary ).toMatch( 'Waardebon code' );
+		await expect( orderSummary ).toMatch( 'Verzendmethoden' );
+		await expect( orderSummary ).toMatch( 'Totaal' );
 	} );
 } );
