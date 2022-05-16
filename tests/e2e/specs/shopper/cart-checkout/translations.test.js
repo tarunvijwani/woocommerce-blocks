@@ -1,7 +1,6 @@
 /**
  * Internal dependencies
  */
-import { DEFAULT_TIMEOUT } from 'tests/e2e/utils';
 import { merchant, shopper } from '../../../../utils';
 
 if ( process.env.WOOCOMMERCE_BLOCKS_PHASE < 2 ) {
