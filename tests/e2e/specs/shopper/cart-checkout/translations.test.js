@@ -9,7 +9,7 @@ if ( process.env.WOOCOMMERCE_BLOCKS_PHASE < 2 ) {
 	test.only( 'Skipping Cart & Checkout tests', () => {} );
 }
 
-describe( 'Shopper → Cart & Checkout → Translations', () => {
+fdescribe( 'Shopper → Cart & Checkout → Translations', () => {
 	beforeAll( async () => {
 		await merchant.changeLanguage( 'nl_NL' );
 	} );
@@ -54,13 +54,6 @@ describe( 'Shopper → Cart & Checkout → Translations', () => {
 		await shopper.block.goToCheckout();
 
 		await page.waitForSelector(
-			'.wp-block-woocommerce-checkout.wc-block-checkout.is-loading',
-			{
-				hidden: true,
-			}
-		);
-
-		await page.waitForSelector(
 			'#contact-fields .wc-block-components-checkout-step__title'
 		);
 
@@ -101,10 +94,10 @@ describe( 'Shopper → Cart & Checkout → Translations', () => {
 		const orderSummary = await page.$(
 			'.wp-block-woocommerce-checkout-order-summary-block'
 		);
-		await expect( orderSummary ).toMatch( 'Besteloverzicht' );
-		await expect( orderSummary ).toMatch( 'Subtotaal' );
-		await expect( orderSummary ).toMatch( 'Waardebon code' );
-		await expect( orderSummary ).toMatch( 'Verzendmethoden' );
-		await expect( orderSummary ).toMatch( 'Totaal' );
+		await expect( page ).toMatch( 'Besteloverzicht' );
+		await expect( page ).toMatch( 'Subtotaal' );
+		await expect( page ).toMatch( 'Waardebon code' );
+		await expect( page ).toMatch( 'Verzendmethoden' );
+		await expect( page ).toMatch( 'Totaal' );
 	} );
 } );
