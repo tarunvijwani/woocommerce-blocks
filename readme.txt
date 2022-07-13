@@ -86,6 +86,13 @@ Release and roadmap notes available on the [WooCommerce Developers Blog](https:/
 
 == Changelog ==
 
+= 7.7.0 - 2022-07-13 =
+
+#### Various
+
+- Add suggested changelog entry here. ([7](https://github.com/tarunvijwani/woocommerce-blocks/pull/7))
+
+
 = 7.6.0 - 2022-05-09 =
 
 #### Enhancements
