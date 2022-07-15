@@ -86,6 +86,13 @@ Release and roadmap notes available on the [WooCommerce Developers Blog](https:/
 
 == Changelog ==
 
+= 9.8.0 - 2022-07-15 =
+
+#### Various
+
+- Add suggested changelog entry here. ([9](https://github.com/tarunvijwani/woocommerce-blocks/pull/9))
+
+
 = 7.6.0 - 2022-05-09 =
 
 #### Enhancements
