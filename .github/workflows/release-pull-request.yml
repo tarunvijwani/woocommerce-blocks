@@ -30,6 +30,7 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   automations: release
             - name: Close current milestone
+              run: echo "🔒 Closing the current milestone"
             - name: Slack finishing message
               uses: act10ns/slack@v1
               with:
