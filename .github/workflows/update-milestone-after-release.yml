@@ -2,7 +2,7 @@ name: Update milestone after release
 on:
   push:
     branches:
-      - master
+      - trunk
 
 jobs:
   logLatestRelease:
