@@ -1,4 +1,8 @@
 name: Update milestone after release
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   logLatestRelease:
