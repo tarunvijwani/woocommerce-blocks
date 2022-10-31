@@ -1,0 +1,13 @@
+name: Manual milestone update
+on: workflow_dispatch
+
+jobs:
+  RandomTest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Manually update milestone
+        uses: tarunvijwani/automations@trunk
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            automations: update-milestone
+      - run: "echo Testing"
