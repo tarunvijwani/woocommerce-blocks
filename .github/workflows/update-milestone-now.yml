@@ -9,5 +9,5 @@ jobs:
         uses: tarunvijwani/automations@v1
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
-             automations: update-milestone
+            automations: update-milestone
       - run: "echo Testing"
