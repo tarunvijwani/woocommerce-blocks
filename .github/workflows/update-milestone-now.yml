@@ -1,0 +1,27 @@
+name: Manual milestone update
+on: workflow_dispatch
+
+jobs:
+  RandomTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: octokit/request-action@v2.x
+        id: get_latest_release
+        with:
+          route: GET /repos/tarunvijwani/woocommerce-blocks/releases/latest
+          owner: octokit
+          repo: request-action
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: "echo Testing"
+      - uses: octokit/request-action@v2.x
+        id: get_milestone
+        with:
+          route: GET /repos/tarunvijwani/woocommerce-blocks/milestones/
+          owner: tarunvijwani
+          repo: woocommerce-blocks
+          state: open
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: "echo Testing"
+      - run: "echo latest release: ${{ fromJSON(steps.get_milestone.outputs.data) }}"
