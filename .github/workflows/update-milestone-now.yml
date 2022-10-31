@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Manually update milestone
-              uses: tarunvijwani/automations@add/update-milestone-after-release
-              with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  automations: release
+        uses: tarunvijwani/automations@add/update-milestone-after-release
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            automations: release
       - run: "echo Testing"
