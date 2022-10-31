@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Manually update milestone
-        uses: tarunvijwani/automations@add/update-milestone-after-release
+        uses: tarunvijwani/automations@v1
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             automations: release
