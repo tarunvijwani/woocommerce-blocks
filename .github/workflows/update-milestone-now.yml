@@ -10,4 +10,6 @@ jobs:
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             automations: update-milestone
-      - run: "echo Testing"
+      - name: Get Latest Tag
+        uses: WyriHaximus/github-action-get-previous-tag@v1
+      - run: "echo Tag name: ${{ steps.previoustag.outputs.tag }}"
