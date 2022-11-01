@@ -5,11 +5,6 @@ jobs:
   RandomTest:
     runs-on: ubuntu-latest
     steps:
-      - name: Manually update milestone
-        uses: tarunvijwani/automations@trunk
-        with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            automations: update-milestone
       - name: CHECKOUT
         uses: actions/checkout@v3
         with:
@@ -18,3 +13,9 @@ jobs:
         id: previoustag
         uses: "WyriHaximus/github-action-get-previous-tag@v1"
       - run: "echo Tag name: ${{ steps.previoustag.outputs.tag }}"
+      - name: Manually update milestone
+        uses: tarunvijwani/automations@trunk
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            automations: update-milestone
+            milestone: ${{ steps.previoustag.outputs.tag }}
