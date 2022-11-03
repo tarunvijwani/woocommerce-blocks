@@ -15,8 +15,8 @@ jobs:
               id: previoustag
               uses: "WyriHaximus/github-action-get-previous-tag@v1"
             - run: "echo Milestone name: ${{ steps.previoustag.outputs.tag }}"
-            - name: Manually update milestone
-              uses: tarunvijwani/automations@trunk
+            - name: Set milestone due date
+              uses: woocommerce/automations@add/update-milestone-after-release
               with:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
                 automations: update-milestone
